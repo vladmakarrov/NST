@@ -1,0 +1,78 @@
+.page-header{
+  width: 1920px;
+  height: 100px;
+  padding: 28px 0 0;
+  background-color: #ffffff;
+}
+
+.navigation-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+.logo {
+  width: 230px;
+  height: 45px;
+  // margin: 0 198px 26px 195px;
+  object-fit: contain;
+}
+
+.item-list {
+  display: flex;
+  justify-content: space-between;
+  
+  list-style-type: none;
+}
+
+.item {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.header-phone-area {
+  display: grid;
+  grid-template-areas: "vertical-line contact-phone"
+                       "vertical-line phone-number";
+}
+
+.vertical-line {
+  grid-area: vertical-line;
+  align-items: center;
+  width: 1px;
+  height: 42px;
+  // margin: 1px 60px 28px 198px;
+  background-color: #b5bdcb;
+}
+
+.contact-phone {
+  grid-area: contact-phone;
+  width: 161px;
+  height: 18px;
+  // margin: 2px 195px 5px 60px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: 0.35px;
+  text-align: left;
+  color: #6f7681;
+}
+
+.phone-number {
+  grid-area: phone-number;
+  width: 122px;
+  height: 18px;
+  // margin: 5px 234px 28px 60px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: 0.35px;
+  text-align: left;
+  color: #101010;
+}
