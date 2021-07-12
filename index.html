@@ -5,28 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="page-header"> 
-    <nav class="navigation-panel">
-        <div class="logo">
-            <img src="assets/img/logo.svg" alt="Строительные технологии">
-        </div> 
-        <ul class="item-list">
-            <li class="item"><a href="#about-company">О компании</a></li>
-            <li class="item"><a href="#objects">Обьекты</a></li>
-            <li class="item"><a href="#press-center">Пресс-центр</a></li>
-            <li class="item"><a href="#contacts">Контакты</a></li>
-        </ul>
-
-        <div class="header-phone-area">
-            <hr class="vertical-line"></hr>
-            <span class="contact-phone">Контактный телефон</span>
-            <a href="tel:111111" class="phone-number">8 (343) 123 45 67</a>
-        </div>
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <img class="logo-img" src="assets/img/logo.svg" alt="Строительные технологии">
+    </div>
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-item-link" href="#about-company">О компании</a></li>
+        <li class="nav-item"><a class="nav-item-link" href="#objects">Обьекты</a></li>
+        <li class="nav-item"><a class="nav-item-link" href="#press-center">Пресс-центр</a></li>
+        <li class="nav-item"><a class="nav-item-link" href="#contacts">Контакты</a></li>
+      </ul>
     </nav>
-    
+    <div class="header-phone-area">
+      <span class="contact-phone">Контактный телефон</span>
+      <a href="tel:111111" class="phone-number">8 (343) 123 45 67</a>
+    </div>
+    <button class="mobile-menu-button">
+  <i class="mobile-menu-icon"></i>
+</button>
+<div class="mobile-menu">
+  <div class="mobile-menu-header">
+    <button class="btn-close">
+      <i class="btn-close-icon"></i>
+    </button>
+  </div>
+  <div class="mobile-menu-content">
+    <nav class="navigation-mobile">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile"><a class="nav-item-link-mobile" href="#about-company">О компании</a></li>
+        <li class="nav-item-mobile"><a class="nav-item-link-mobile" href="#objects">Обьекты</a></li>
+        <li class="nav-item-mobile"><a class="nav-item-link-mobile" href="#press-center">Пресс-центр</a></li>
+        <li class="nav-item-mobile"><a class="nav-item-link-mobile" href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header-phone-area-mobile">
+      <div class="region">
+        <span class="region-label">Регион</span>
+        <select class="select-region">
+          <option>Санкт-Петербург</option>
+          <option>Москва</option>
+          <option>Белгород</option>
+        </select>
+      </div>
+      <span class="contact-phone-mobile">Контактный телефон</span>
+      <a href="tel:111111" class="phone-number-mobile">8 (343) 123 45 67</a>
+    </div>
+  </div>
+</div>
+  </div>
 </header>
 <script src="./scripts/script.js"></script>
   </body>

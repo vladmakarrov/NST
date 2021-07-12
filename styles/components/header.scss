@@ -1,78 +1,80 @@
-.page-header{
-  width: 1920px;
-  height: 100px;
-  padding: 28px 0 0;
-  background-color: #ffffff;
-}
-
-.navigation-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  
+.header-container {
+  @extend %container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
 }
 
 .logo {
-  width: 230px;
-  height: 45px;
-  // margin: 0 198px 26px 195px;
+  width: 203px;
+  height: 40px;
   object-fit: contain;
+  @media (min-width: $breakpoint-desktop-s) {
+    width: 230px;
+    height: 45px;
+  }
 }
 
-.item-list {
+.logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  display: none;
+  @media (min-width: $breakpoint-desktop-s) {
+    display: flex;
+  }
+}
+
+.nav-list {
   display: flex;
   justify-content: space-between;
-  
-  list-style-type: none;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.item {
-  margin-left: 0;
-  padding-left: 0;
+.nav-item {
+  display: flex;
+}
+
+.nav-item-link {
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  @media (min-width: $breakpoint-desktop-m) {
+    padding: 0 45px;
+  }
+  @media (min-width: $breakpoint-desktop-l) {
+    padding: 0 60px;
+  }
 }
 
 .header-phone-area {
-  display: grid;
-  grid-template-areas: "vertical-line contact-phone"
-                       "vertical-line phone-number";
-}
-
-.vertical-line {
-  grid-area: vertical-line;
-  align-items: center;
-  width: 1px;
-  height: 42px;
-  // margin: 1px 60px 28px 198px;
-  background-color: #b5bdcb;
+  display: none;
+  @media (min-width: $breakpoint-desktop-s) {
+    display: flex;
+  }
+  flex-direction: column;
+  justify-content: space-around;
+  border-left: 1px solid #b5bdcb;
+  padding-left: 60px;
 }
 
 .contact-phone {
-  grid-area: contact-phone;
-  width: 161px;
-  height: 18px;
-  // margin: 2px 195px 5px 60px;
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.29;
   letter-spacing: 0.35px;
-  text-align: left;
   color: #6f7681;
 }
 
 .phone-number {
-  grid-area: phone-number;
-  width: 122px;
-  height: 18px;
-  // margin: 5px 234px 28px 60px;
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.29;
   letter-spacing: 0.35px;
-  text-align: left;
   color: #101010;
 }
+

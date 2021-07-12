@@ -57,7 +57,7 @@ function watchFiles() {
   gulp.watch('./styles/**/*.scss', gulp.series(gulpSass, reload));
   gulp.watch('./kit/**/*.kit', gulp.series(gulpKit, reload));
   gulp.watch('./**/*.html', gulp.series(reload));
-  gulp.watch('*.js', gulp.series(reload));
+  gulp.watch('./scripts/**/*.js', gulp.series(reload));
 }
 
 exports.watch = gulp.series(compile, watchFiles);
