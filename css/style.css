@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +5,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif; }
+  body.menu-open {
+    overflow: hidden; }
 
 .hidden {
   display: none; }
@@ -13,19 +14,135 @@ body {
 li {
   list-style-type: none; }
 
-.header-container {
+button {
+  outline: none; }
+
+.footer-container, .header-container {
   width: 100%;
   max-width: 1530px;
   margin: 0 auto;
   padding: 0 20px; }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: auto; }
+
+.main {
+  flex: 1 1 auto; }
+
 a {
   text-decoration: none; }
 
-.mobile-menu-icon, .btn-close-icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
+.footer {
+  flex: 0 0 auto;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column; }
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .footer-container {
+      padding: 50px 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 270px; } }
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .footer-info {
+      text-align: left; } }
+
+.footer-logo {
+  padding: 40px 0; }
+  @media (min-width: 768px) {
+    .footer-logo {
+      padding: 0 0 50px; } }
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #010101;
+  width: 236px;
+  margin-bottom: 50px; }
+  @media (min-width: 768px) {
+    .footer-contacts {
+      margin-bottom: 0;
+      width: 100%; } }
+
+.footer-phone-number {
+  color: #010101;
+  cursor: pointer; }
+
+.footer-navigation {
+  margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .footer-navigation {
+      margin-bottom: 0; } }
+
+.footer-nav-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #010101;
+  padding: 0 0 20px; }
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  color: #010101;
+  height: 130px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .footer-nav-list {
+      text-align: left; } }
+
+.footer-nav-link {
+  cursor: pointer; }
+
+.footer-city {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0 20px;
+  border-top: 1px solid rgba(111, 118, 129, 0.2); }
+  @media (min-width: 768px) {
+    .footer-city {
+      height: 63px;
+      width: 230px;
+      padding: 0;
+      border-top: none; } }
+
+.footer-copyright {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6f7681;
+  border-top: none; }
+  @media (min-width: 768px) {
+    .footer-copyright {
+      border-top: 1px solid rgba(111, 118, 129, 0.2); } }
+
+.header {
+  flex: 0 0 auto;
+  background-color: #fff;
+  position: sticky;
+  top: 0; }
 
 .header-container {
   display: flex;
@@ -97,46 +214,65 @@ a {
   color: #101010; }
 
 .mobile-menu-button {
-  background-color: #000;
+  width: 40px;
+  height: 41px;
+  background-color: #010101;
   border: none;
-  padding: 10px; }
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 300ms; }
   @media (min-width: 1024px) {
     .mobile-menu-button {
       display: none; } }
+  .mobile-menu-button.active {
+    background-color: #f8f8f8; }
 
-.mobile-menu-icon {
+.mobile-menu-line {
   display: block;
-  height: 20px;
   width: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cdefs%3E%3Cstyle%3E .cls-2%7Bfill:none;stroke:%23fff;stroke-width:2px%7D %3C/style%3E%3C/defs%3E%3Cg id='menu' transform='translate(-16 -27)'%3E%3Cg id='Сгруппировать_1286'%3E%3Cpath id='Линия_132' d='M0 0L20 0' class='cls-2' transform='translate(16 37)'/%3E%3Cpath id='Линия_133' d='M0 0L20 0' class='cls-2' transform='translate(16 32)'/%3E%3Cpath id='Линия_134' d='M0 0L20 0' class='cls-2' transform='translate(16 42)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A"); }
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 1px;
+  transition: all 300ms; }
+  .active .mobile-menu-line {
+    transform: translateX(-100%);
+    background-color: transparent; }
+  .mobile-menu-line::before, .mobile-menu-line::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 1px;
+    transition: all 300ms; }
+  .mobile-menu-line::before {
+    transform: translateY(-6px); }
+    .active .mobile-menu-line::before {
+      background-color: #6f7681;
+      transform: rotate(45deg) translate(14px, -14px); }
+  .mobile-menu-line::after {
+    transform: translateY(6px); }
+    .active .mobile-menu-line::after {
+      background-color: #6f7681;
+      transform: rotate(-45deg) translate(14px, 14px); }
 
 .mobile-menu {
-  display: none; }
-  .mobile-menu.is-open {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column; }
-
-.mobile-menu-header {
+  position: fixed;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 20px; }
-
-.btn-close {
-  background-color: #f8f8f8;
-  border: none;
-  padding: 10px; }
-
-.btn-close-icon {
-  display: block;
-  height: 20px;
-  width: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg%3E%3Cpath fill='%23b5bdcb' d='M.227 1.335a.8.8 0 0 1 0-1.11.8.8 0 0 1 1.11 0L8 6.9 14.67.225a.781.781 0 0 1 1.1 1.11L9.108 8l6.661 6.67a.781.781 0 0 1-1.1 1.11L8 9.1l-6.661 6.67a.8.8 0 0 1-1.11 0 .8.8 0 0 1 0-1.11L6.888 8z' transform='translate(-330 -1344) translate(329.998 1344)'/%3E%3C/g%3E%3C/svg%3E%0A"); }
+  flex-direction: column;
+  padding: 10px 0px;
+  transition: all 400ms;
+  transform: translateX(100%);
+  background-color: #fff; }
+  .mobile-menu.active {
+    transform: translateX(0); }
 
 .mobile-menu-content {
   flex: 1 1 auto;
@@ -188,7 +324,7 @@ a {
   font-weight: 600;
   line-height: 1.19;
   letter-spacing: 0.4px;
-  color: #101010;
+  color: #010101;
   border: none;
   background-color: #fff;
   cursor: pointer;

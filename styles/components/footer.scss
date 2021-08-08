@@ -1,0 +1,114 @@
+.footer {
+	flex: 0 0 auto; 
+	background-color: $footer-background;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-container {
+	@extend %container;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 0;
+	@media (min-width: $breakpoint-tablet) {
+		padding: 50px 20px;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 270px;
+	}
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+	text-align: center;
+	@media (min-width: $breakpoint-tablet) {
+		text-align: left;
+	}
+}
+
+.footer-logo {
+	padding: 40px 0;
+	@media (min-width: $breakpoint-tablet) {
+		padding: 0 0 50px;
+	}
+}
+
+.footer-contacts {
+	display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+	color: $color-black;
+	width: 236px;
+	margin-bottom: 50px;
+	@media (min-width: $breakpoint-tablet) {
+		margin-bottom: 0;
+		width: 100%;
+	}
+}
+
+.footer-phone-number {
+	color: $color-black;
+	cursor: pointer;
+}
+
+.footer-navigation {
+	margin-bottom: 40px;
+	@media (min-width: $breakpoint-tablet) {
+		margin-bottom: 0;
+	}
+}
+
+.footer-nav-title {
+	font-size: 14px;
+  font-weight: bold;
+	color: $color-black;
+	padding: 0 0 20px;
+}
+
+.footer-nav-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 14px;
+  font-weight: 500;
+	color: $color-black;
+	height: 130px;
+	text-align: center;
+	@media (min-width: $breakpoint-tablet) {
+		text-align: left;
+	}
+}
+
+.footer-nav-link {
+  cursor: pointer;
+}
+
+.footer-city {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	width: 100%;
+	padding: 40px 0 20px;
+	border-top: 1px solid rgba($gray-text, .2);
+	@media (min-width: $breakpoint-tablet) {
+		height: 63px;
+		width: 230px;
+		padding: 0;
+		border-top: none;
+	}
+}
+
+.footer-copyright {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 14px;
+	font-weight: 500;
+	color: $gray-text;
+	border-top: none;
+	@media (min-width: $breakpoint-tablet) {
+		border-top: 1px solid rgba($gray-text, .2);
+	}
+}

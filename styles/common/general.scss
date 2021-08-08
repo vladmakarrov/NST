@@ -6,6 +6,9 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    &.menu-open {
+        overflow: hidden;
+    }
 }
 
 .hidden {
@@ -14,4 +17,8 @@ body {
 
 li {
     list-style-type: none;
+}
+
+button {
+    outline: none;
 }
