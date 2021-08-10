@@ -1,24 +1,24 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    &.menu-open {
-        overflow: hidden;
-    }
+  font-family: 'Montserrat', sans-serif;
+  &.menu-open {
+      overflow: hidden;
+  }
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 button {
-    outline: none;
+  outline: none;
 }

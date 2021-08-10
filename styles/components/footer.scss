@@ -37,9 +37,9 @@
 
 .footer-contacts {
 	display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-weight: 500;
+	flex-direction: column;
+	font-size: 14px;
+	font-weight: 500;
 	color: $color-black;
 	width: 236px;
 	margin-bottom: 50px;
@@ -63,7 +63,7 @@
 
 .footer-nav-title {
 	font-size: 14px;
-  font-weight: bold;
+  	font-weight: bold;
 	color: $color-black;
 	padding: 0 0 20px;
 }
@@ -73,7 +73,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	font-size: 14px;
-  font-weight: 500;
+  	font-weight: 500;
 	color: $color-black;
 	height: 130px;
 	text-align: center;
@@ -84,6 +84,7 @@
 
 .footer-nav-link {
   cursor: pointer;
+  color: $color-black;
 }
 
 .footer-city {
@@ -92,7 +93,7 @@
 	justify-content: center;
 	width: 100%;
 	padding: 40px 0 20px;
-	border-top: 1px solid rgba($gray-text, .2);
+	border-top: 1px solid rgba($color-gray, .2);
 	@media (min-width: $breakpoint-tablet) {
 		height: 63px;
 		width: 230px;
@@ -106,9 +107,9 @@
 	padding: 20px 0;
 	font-size: 14px;
 	font-weight: 500;
-	color: $gray-text;
+	color: $color-gray;
 	border-top: none;
 	@media (min-width: $breakpoint-tablet) {
-		border-top: 1px solid rgba($gray-text, .2);
+		border-top: 1px solid rgba($color-gray, .2);
 	}
 }
